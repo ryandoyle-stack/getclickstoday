@@ -17,9 +17,9 @@ export default function ServicesIndexClient() {
     {href:'/services/email-marketing',name:'Email Marketing',price:'$500/mo',desc:'2–4 campaigns per month, automated flows, segmentation, and A/B testing for maximum ROI.'},
     {href:'/services/seo-local-search',name:'SEO & Local Search',price:'$500/mo',desc:'Full-stack SEO — technical, on-page, citations, backlinks — to rank for SoFlo searches.'},
     {href:'/services/paid-ads',name:'Paid Ads Management',price:'$500/mo + ad spend',desc:'Meta, Google, and TikTok ads run with weekly optimization and full transparency.'},
-    {href:'/#services',name:'GBP Management',price:'$500/mo',desc:'Weekly Google Business Profile posts, photos, Q&A, and review replies.'},
-    {href:'/#services',name:'Reputation & Review Management',price:'$500/mo',desc:'Multi-platform review monitoring, response management, and review growth.'},
-    {href:'/#services',name:'Blog Content Marketing',price:'$600/mo',desc:'4 SEO-optimized blog posts per month with keyword targeting and internal linking.'},
+    {href:'/services/gbp-management',name:'GBP Management',price:'$500/mo',desc:'Weekly Google Business Profile posts, photos, Q&A, and review replies.'},
+    {href:'/services/reputation-management',name:'Reputation & Review Management',price:'$500/mo',desc:'Multi-platform review monitoring, response management, and review growth.'},
+    {href:'/services/blog-content-marketing',name:'Blog Content Marketing',price:'$600/mo',desc:'4 SEO-optimized blog posts per month with keyword targeting and internal linking.'},
   ]
 
   return (
@@ -29,7 +29,6 @@ export default function ServicesIndexClient() {
       </div>
       <nav>
         <a href="/" className="nav-logo">
-          <img src="/logo.jpg" alt="GetClicksToday" />
           Get<span>Clicks</span>Today
         </a>
         <ul className="nav-links">
@@ -86,7 +85,6 @@ export default function ServicesIndexClient() {
 
       <footer>
         <a href="/" className="footer-logo">
-          <img src="/logo.jpg" alt="GetClicksToday" />
           Get<span>Clicks</span>Today
         </a>
         <ul className="footer-nav">

@@ -15,7 +15,6 @@ export default function ThankYou() {
     <>
       <nav>
         <a href="/" className="nav-logo">
-          <img src="/logo.jpg" alt="GetClicksToday" />
           Get<span>Clicks</span>Today
         </a>
         <ul className="nav-links">
@@ -48,7 +47,6 @@ export default function ThankYou() {
 
       <footer>
         <a href="/" className="footer-logo">
-          <img src="/logo.jpg" alt="GetClicksToday" />
           Get<span>Clicks</span>Today
         </a>
         <ul className="footer-nav">

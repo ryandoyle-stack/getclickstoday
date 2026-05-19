@@ -34,7 +34,6 @@ export default function Home() {
 
       <nav>
         <a href="#hero-wrap" className="nav-logo">
-          <img src="/logo.jpg" alt="GetClicksToday" />
           Get<span>Clicks</span>Today
         </a>
         <ul className="nav-links">
@@ -587,7 +586,6 @@ export default function Home() {
 
       <footer>
         <a href="#hero-wrap" className="footer-logo">
-          <img src="/logo.jpg" alt="GetClicksToday" />
           Get<span>Clicks</span>Today
         </a>
         <ul className="footer-nav">
