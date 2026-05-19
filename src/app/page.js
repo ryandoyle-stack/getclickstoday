@@ -44,6 +44,9 @@ export default function Home() {
               <a href="/services/email-marketing"><strong>Email Marketing</strong><span>$500/mo</span></a>
               <a href="/services/seo-local-search"><strong>SEO & Local Search</strong><span>$500/mo</span></a>
               <a href="/services/paid-ads"><strong>Paid Ads Management</strong><span>$500/mo + ad spend</span></a>
+              <a href="/services/gbp-management"><strong>GBP Management</strong><span>$500/mo</span></a>
+              <a href="/services/reputation-management"><strong>Reputation Management</strong><span>$500/mo</span></a>
+              <a href="/services/blog-content-marketing"><strong>Blog Content Marketing</strong><span>$600/mo</span></a>
               <div className="nav-dropdown-divider"></div>
               <a href="/services" className="all-link">See all services →</a>
               <a href="#pricing">See pricing →</a>
@@ -268,7 +271,10 @@ export default function Home() {
                 <div><div className="ind-stat-num">3.8×</div><div className="ind-stat-lbl">Ad return on spend</div></div>
                 <div><div className="ind-stat-num">30 days</div><div className="ind-stat-lbl">To first booked leads</div></div>
               </div>
-              <a href="#contact" className="btn-primary">Get a free audit →</a>
+              <div style={{display:'flex',gap:'10px',flexWrap:'wrap'}}>
+                <a href="#contact" className="btn-primary">Get a free audit →</a>
+                <a href="/industries/med-spas" className="btn-ghost">See full playbook →</a>
+              </div>
             </div>
             <div id="ind-dental" className="ind-panel">
               <div className="ind-eyebrow">Dental &amp; Cosmetic Dentistry</div>
@@ -279,7 +285,10 @@ export default function Home() {
                 <div><div className="ind-stat-num">2.5×</div><div className="ind-stat-lbl">High-ticket case value</div></div>
                 <div><div className="ind-stat-num">45 days</div><div className="ind-stat-lbl">To booked consultations</div></div>
               </div>
-              <a href="#contact" className="btn-primary">Fill my chair →</a>
+              <div style={{display:'flex',gap:'10px',flexWrap:'wrap'}}>
+                <a href="#contact" className="btn-primary">Fill my chair →</a>
+                <a href="/industries/dental" className="btn-ghost">See full playbook →</a>
+              </div>
             </div>
             <div id="ind-restaurants" className="ind-panel">
               <div className="ind-eyebrow">Restaurants &amp; Hospitality</div>
@@ -290,7 +299,10 @@ export default function Home() {
                 <div><div className="ind-stat-num">3.2×</div><div className="ind-stat-lbl">Ad return on spend</div></div>
                 <div><div className="ind-stat-num">90 days</div><div className="ind-stat-lbl">To measurable results</div></div>
               </div>
-              <a href="#contact" className="btn-primary">Get a free audit →</a>
+              <div style={{display:'flex',gap:'10px',flexWrap:'wrap'}}>
+                <a href="#contact" className="btn-primary">Get a free audit →</a>
+                <a href="/industries/restaurants" className="btn-ghost">See full playbook →</a>
+              </div>
             </div>
             <div id="ind-local" className="ind-panel">
               <div className="ind-eyebrow">Local Services</div>
@@ -301,7 +313,10 @@ export default function Home() {
                 <div><div className="ind-stat-num">5×</div><div className="ind-stat-lbl">More Google calls</div></div>
                 <div><div className="ind-stat-num">30 days</div><div className="ind-stat-lbl">To first ranking lift</div></div>
               </div>
-              <a href="#contact" className="btn-primary">Get your market analysis →</a>
+              <div style={{display:'flex',gap:'10px',flexWrap:'wrap'}}>
+                <a href="#contact" className="btn-primary">Get your market analysis →</a>
+                <a href="/industries/local-services" className="btn-ghost">See full playbook →</a>
+              </div>
             </div>
             <div id="ind-ecommerce" className="ind-panel">
               <div className="ind-eyebrow">Ecommerce</div>
@@ -312,7 +327,10 @@ export default function Home() {
                 <div><div className="ind-stat-num">+40%</div><div className="ind-stat-lbl">Email revenue lift</div></div>
                 <div><div className="ind-stat-num">60 days</div><div className="ind-stat-lbl">Full funnel live</div></div>
               </div>
-              <a href="#contact" className="btn-primary">Grow my store →</a>
+              <div style={{display:'flex',gap:'10px',flexWrap:'wrap'}}>
+                <a href="#contact" className="btn-primary">Grow my store →</a>
+                <a href="/industries/ecommerce" className="btn-ghost">See full playbook →</a>
+              </div>
             </div>
             <div id="ind-professional" className="ind-panel">
               <div className="ind-eyebrow">Professional Services</div>
@@ -323,7 +341,10 @@ export default function Home() {
                 <div><div className="ind-stat-num">2×</div><div className="ind-stat-lbl">Consultation bookings</div></div>
                 <div><div className="ind-stat-num">6 mo</div><div className="ind-stat-lbl">To authority ranking</div></div>
               </div>
-              <a href="#contact" className="btn-primary">Build my authority →</a>
+              <div style={{display:'flex',gap:'10px',flexWrap:'wrap'}}>
+                <a href="#contact" className="btn-primary">Build my authority →</a>
+                <a href="/industries/professional-services" className="btn-ghost">See full playbook →</a>
+              </div>
             </div>
             <div id="ind-realestate" className="ind-panel">
               <div className="ind-eyebrow">Real Estate</div>
@@ -334,7 +355,10 @@ export default function Home() {
                 <div><div className="ind-stat-num">+85%</div><div className="ind-stat-lbl">Email open rates</div></div>
                 <div><div className="ind-stat-num">45 days</div><div className="ind-stat-lbl">To first inbound lead</div></div>
               </div>
-              <a href="#contact" className="btn-primary">Grow my brand →</a>
+              <div style={{display:'flex',gap:'10px',flexWrap:'wrap'}}>
+                <a href="#contact" className="btn-primary">Grow my brand →</a>
+                <a href="/industries/real-estate" className="btn-ghost">See full playbook →</a>
+              </div>
             </div>
           </div>
         </div>

@@ -2,7 +2,24 @@
 import '../globals.css'
 import { useEffect } from 'react'
 
-export default function IndustriesIndexClient() {
+const posts = [
+  {
+    href: '/blog/meta-ads-med-spas-south-florida-2025',
+    category: 'Paid Ads',
+    date: 'May 19, 2025',
+    title: 'The 2025 Meta Ads Playbook for South Florida Med Spas',
+    excerpt: 'How to turn Instagram scrollers into booked consultations. The three-layer campaign structure, creative that converts, and the metrics that actually matter.',
+  },
+  {
+    href: '/blog/google-business-profile-local-marketing-2025',
+    category: 'Local SEO',
+    date: 'May 12, 2025',
+    title: 'Why Your Google Business Profile Is More Valuable Than Your Website',
+    excerpt: '46% of searches have local intent — and the map pack wins most of those clicks. Here\'s what actually moves your GBP ranking in 2025.',
+  },
+]
+
+export default function BlogIndexClient() {
   useEffect(() => {
     const obs = new IntersectionObserver(entries => {
       entries.forEach(e => {
@@ -11,16 +28,6 @@ export default function IndustriesIndexClient() {
     }, { threshold: 0.07 })
     document.querySelectorAll('.fade-up').forEach(el => obs.observe(el))
   }, [])
-
-  const industries = [
-    {href:'/industries/med-spas',name:'Med Spas & Aesthetics',hot:true,tagline:'Fill your books. Book high-ticket treatments.',desc:'Meta ads, social content, and reputation management built for SoFlo\'s competitive aesthetic market.'},
-    {href:'/industries/dental',name:'Dental & Cosmetic Dentistry',hot:true,tagline:'More new patients. More high-value cases.',desc:'SEO, paid ads, and reputation systems that bring in cosmetic cases and general patients consistently.'},
-    {href:'/industries/restaurants',name:'Restaurants & Hospitality',hot:false,tagline:'More reservations. More repeat guests.',desc:'Social, Google visibility, email, and ads — everything a SoFlo restaurant needs to fill seats nightly.'},
-    {href:'/industries/local-services',name:'Local Services',hot:false,tagline:'Dominate your local market.',desc:'Local SEO, GBP management, and Google Ads for contractors, salons, cleaners, and service businesses.'},
-    {href:'/industries/ecommerce',name:'Ecommerce',hot:false,tagline:'Turn browsers into buyers.',desc:'Meta Shopping ads, email automation, and SEO that drives profitable revenue for DTC brands.'},
-    {href:'/industries/professional-services',name:'Professional Services',hot:false,tagline:'Build authority. Win clients.',desc:'Content marketing, SEO, and reputation management for law firms, advisors, consultants, and healthcare.'},
-    {href:'/industries/real-estate',name:'Real Estate',hot:false,tagline:'More listings. More closings.',desc:'Social media, email drips, and seller lead campaigns for agents and brokerages in the SoFlo market.'},
-  ]
 
   return (
     <>
@@ -71,32 +78,28 @@ export default function IndustriesIndexClient() {
         <div className="hero-vignette"></div>
         <section style={{maxWidth:'1280px',margin:'0 auto',padding:'80px 52px 60px',position:'relative',zIndex:5}}>
           <a href="/" className="back-link">Back to home</a>
-          <div className="eyebrow" style={{marginBottom:'24px'}}>Industries we serve</div>
+          <div className="eyebrow" style={{marginBottom:'24px'}}>Marketing insights</div>
           <h1 style={{maxWidth:'900px',marginBottom:'24px'}}>
-            Deep expertise.<br /><em>Proven playbooks.</em>
+            The playbook.<br /><em>Straight from the field.</em>
           </h1>
-          <p style={{fontSize:'17px',fontWeight:300,color:'rgba(242,239,245,0.7)',maxWidth:'640px',lineHeight:1.75,marginBottom:'40px'}}>
-            We don&apos;t do generic marketing. We specialize in SoFlo&apos;s highest-value industries — with the strategies, content, and channel mix that actually works for each one.
+          <p style={{fontSize:'17px',fontWeight:300,color:'rgba(242,239,245,0.7)',maxWidth:'580px',lineHeight:1.75}}>
+            Tactics, strategies, and real-world frameworks for South Florida businesses that want to grow.
           </p>
-          <div style={{display:'flex',gap:'12px',flexWrap:'wrap'}}>
-            <a href="/#contact" className="btn-primary">Get a free audit →</a>
-            <a href="/services" className="btn-ghost">See all services</a>
-          </div>
         </section>
       </div>
 
       <section style={{background:'var(--bg)'}} className="dot-bg">
-        <div className="wrap" style={{padding:'80px 52px'}}>
-          <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(320px,1fr))',gap:'1px',background:'var(--border)',border:'1px solid var(--border)',borderRadius:'12px',overflow:'hidden'}} className="fade-up">
-            {industries.map((ind, i) => (
-              <a key={i} href={ind.href} style={{background:'var(--bg2)',padding:'32px 36px',textDecoration:'none',color:'var(--text)',transition:'background 0.2s',display:'block',position:'relative'}}>
-                {ind.hot && (
-                  <span style={{position:'absolute',top:'20px',right:'20px',background:'var(--pink)',color:'#fff',fontSize:'10px',fontWeight:700,letterSpacing:'0.08em',textTransform:'uppercase',padding:'3px 8px',borderRadius:'4px'}}>Hot</span>
-                )}
-                <div style={{fontSize:'13px',color:'var(--cyan)',letterSpacing:'0.06em',textTransform:'uppercase',fontWeight:600,marginBottom:'10px'}}>{ind.tagline}</div>
-                <div style={{fontFamily:'var(--font-display)',fontSize:'22px',fontWeight:700,letterSpacing:'-0.02em',marginBottom:'10px'}}>{ind.name}</div>
-                <p style={{fontSize:'14px',color:'var(--muted)',lineHeight:1.7,fontWeight:300,marginBottom:'20px'}}>{ind.desc}</p>
-                <div style={{fontSize:'12px',color:'var(--cyan)',letterSpacing:'0.04em'}}>See playbook →</div>
+        <div className="wrap" style={{padding:'80px 52px',maxWidth:'900px'}}>
+          <div style={{display:'flex',flexDirection:'column',gap:'1px',background:'var(--border)',border:'1px solid var(--border)',borderRadius:'12px',overflow:'hidden'}} className="fade-up">
+            {posts.map((post, i) => (
+              <a key={i} href={post.href} style={{background:'var(--bg2)',padding:'36px 40px',textDecoration:'none',color:'var(--text)',display:'block',transition:'background 0.2s'}}>
+                <div style={{display:'flex',gap:'12px',alignItems:'center',marginBottom:'14px'}}>
+                  <span style={{fontSize:'11px',fontWeight:600,letterSpacing:'0.1em',textTransform:'uppercase',color:'var(--cyan)',background:'rgba(0,212,255,0.08)',padding:'3px 10px',borderRadius:'4px'}}>{post.category}</span>
+                  <span style={{fontSize:'12px',color:'var(--muted)',fontWeight:300}}>{post.date}</span>
+                </div>
+                <div style={{fontFamily:'var(--font-display)',fontSize:'clamp(20px,2.5vw,26px)',fontWeight:700,letterSpacing:'-0.02em',lineHeight:1.2,marginBottom:'12px'}}>{post.title}</div>
+                <p style={{fontSize:'14px',color:'var(--muted)',lineHeight:1.7,fontWeight:300,marginBottom:'20px',maxWidth:'600px'}}>{post.excerpt}</p>
+                <div style={{fontSize:'12px',color:'var(--pink)',letterSpacing:'0.04em',fontWeight:600}}>Read article →</div>
               </a>
             ))}
           </div>
@@ -105,8 +108,8 @@ export default function IndustriesIndexClient() {
 
       <section style={{background:'var(--bg2)',borderTop:'1px solid var(--border)'}}>
         <div className="wrap" style={{padding:'80px 52px',textAlign:'center',maxWidth:'900px'}}>
-          <div className="eyebrow" style={{marginBottom:'20px',justifyContent:'center'}}>Don&apos;t see yours?</div>
-          <h2 style={{fontFamily:'var(--font-display)',fontWeight:800,fontSize:'clamp(32px,4.5vw,56px)',letterSpacing:'-0.04em',lineHeight:1.05,marginBottom:'20px'}}>We work with any<br />SoFlo business <em style={{fontStyle:'normal',color:'var(--pink)'}}>ready to grow.</em></h2>
+          <div className="eyebrow" style={{marginBottom:'20px',justifyContent:'center'}}>Ready to grow?</div>
+          <h2 style={{fontFamily:'var(--font-display)',fontWeight:800,fontSize:'clamp(32px,4.5vw,56px)',letterSpacing:'-0.04em',lineHeight:1.05,marginBottom:'20px'}}>Put the playbook<br /><em style={{fontStyle:'normal',color:'var(--pink)'}}>to work.</em></h2>
           <p style={{fontSize:'16px',color:'var(--muted)',fontWeight:300,maxWidth:'520px',margin:'0 auto 32px',lineHeight:1.75}}>Start with a free 30-minute strategy audit. We&apos;ll tell you exactly what we&apos;d prioritize for your business.</p>
           <a href="/#contact" className="btn-primary">Get your free audit →</a>
         </div>
@@ -119,7 +122,7 @@ export default function IndustriesIndexClient() {
         <ul className="footer-nav">
           <li><a href="/services">Services</a></li>
           <li><a href="/industries">Industries</a></li>
-          <li><a href="/#pricing">Pricing</a></li>
+          <li><a href="/blog">Blog</a></li>
           <li><a href="/#contact">Contact</a></li>
         </ul>
         <span className="footer-copy">© 2025 GetClicksToday · Fort Lauderdale, FL</span>

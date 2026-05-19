@@ -39,6 +39,9 @@ export default function ServicesIndexClient() {
               <a href="/services/email-marketing"><strong>Email Marketing</strong><span>$500/mo</span></a>
               <a href="/services/seo-local-search"><strong>SEO &amp; Local Search</strong><span>$500/mo</span></a>
               <a href="/services/paid-ads"><strong>Paid Ads Management</strong><span>$500/mo + ad spend</span></a>
+              <a href="/services/gbp-management"><strong>GBP Management</strong><span>$500/mo</span></a>
+              <a href="/services/reputation-management"><strong>Reputation Management</strong><span>$500/mo</span></a>
+              <a href="/services/blog-content-marketing"><strong>Blog Content Marketing</strong><span>$600/mo</span></a>
               <div className="nav-dropdown-divider"></div>
               <a href="/services" className="all-link">See all services →</a>
               <a href="/#pricing">See pricing →</a>

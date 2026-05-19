@@ -301,6 +301,19 @@ footer{border-top:1px solid var(--border);padding:40px 52px;display:flex;align-i
 .back-link:hover{color:var(--cyan)}
 .back-link::before{content:'←';font-size:14px}
 
+/* BLOG */
+.blog-body{font-size:16px;line-height:1.8;color:var(--text);font-weight:300}
+.blog-body p{margin-bottom:24px}
+.blog-body h2{font-family:var(--font-display);font-size:clamp(22px,2.8vw,30px);font-weight:800;letter-spacing:-0.03em;line-height:1.1;margin:48px 0 16px;color:var(--text)}
+.blog-body h3{font-family:var(--font-display);font-size:18px;font-weight:700;letter-spacing:-0.02em;margin:32px 0 12px;color:var(--cyan)}
+.blog-body ul,.blog-body ol{padding-left:24px;margin-bottom:24px;display:flex;flex-direction:column;gap:10px}
+.blog-body li{font-size:15px;line-height:1.7;color:var(--text)}
+.blog-body strong{font-weight:600;color:var(--text)}
+.blog-body em{color:var(--pink);font-style:normal}
+.blog-body a{color:var(--cyan);text-decoration:underline;text-underline-offset:3px;transition:color 0.2s}
+.blog-body a:hover{color:var(--text)}
+.blog-body blockquote{border-left:3px solid var(--pink);padding:16px 24px;margin:32px 0;background:var(--bg2);border-radius:0 8px 8px 0;font-size:17px;font-style:italic;color:var(--muted)}
+
 /* MOBILE */
 @media(max-width:860px){
   nav{padding:0 20px;height:62px}
