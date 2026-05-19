@@ -314,6 +314,9 @@ footer{border-top:1px solid var(--border);padding:40px 52px;display:flex;align-i
 .blog-body a:hover{color:var(--text)}
 .blog-body blockquote{border-left:3px solid var(--pink);padding:16px 24px;margin:32px 0;background:var(--bg2);border-radius:0 8px 8px 0;font-size:17px;font-style:italic;color:var(--muted)}
 
+/* HERO FORM GRID */
+.hero-form-grid{display:grid;grid-template-columns:1fr 380px;gap:56px;align-items:center;margin-bottom:40px}
+
 /* MOBILE */
 @media(max-width:860px){
   nav{padding:0 20px;height:62px}
@@ -325,6 +328,7 @@ footer{border-top:1px solid var(--border);padding:40px 52px;display:flex;align-i
   .bundle-hl-grid{grid-template-columns:1fr;gap:40px}
   .svc-grid-top,.svc-grid-bot,.process-grid,.proj-grid,.testi-grid,.compare-strip{grid-template-columns:1fr}
   .testi-featured{grid-template-columns:1fr;gap:24px;padding:28px}
+  .hero-form-grid{grid-template-columns:1fr}
   .ind-layout{grid-template-columns:1fr}
   .ind-tabs{flex-direction:row;overflow-x:auto;border-right:none;border-bottom:1px solid var(--border)}
   .ind-tab{border-bottom:none;border-right:1px solid var(--border);white-space:nowrap}

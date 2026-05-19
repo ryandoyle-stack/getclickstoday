@@ -76,17 +76,42 @@ export default function Home() {
         <div className="hero-overlay"></div>
         <div className="hero-vignette"></div>
         <section id="hero">
-          <div className="spots-pill"><span className="spots-dot"></span>Accepting new clients</div>
-          <div className="eyebrow">Full-Service Marketing Agency · SoFlo</div>
-          <h1>We build brands<br />that <em>dominate</em><br />their market.</h1>
-          <p className="hero-sub">From websites to paid ads to monthly content — GetClicksToday is your one agency for real, measurable growth. No fluff. No guesswork. No long contracts.</p>
-          <div className="hero-guarantee">
-            <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12" /></svg>
-            First deliverable in 14 days or less. Cancel anytime, no penalties.
-          </div>
-          <div className="hero-actions">
-            <a href="#contact" className="btn-primary">Get your free audit →</a>
-            <a href="#pricing" className="btn-ghost">See pricing</a>
+          <div className="hero-form-grid">
+            <div>
+              <div className="spots-pill"><span className="spots-dot"></span>Accepting new clients</div>
+              <div className="eyebrow">Full-Service Marketing Agency · SoFlo</div>
+              <h1>We build brands<br />that <em>dominate</em><br />their market.</h1>
+              <p className="hero-sub">From websites to paid ads to monthly content — GetClicksToday is your one agency for real, measurable growth. No fluff. No guesswork. No long contracts.</p>
+              <div className="hero-guarantee">
+                <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12" /></svg>
+                First deliverable in 14 days or less. Cancel anytime, no penalties.
+              </div>
+            </div>
+            <div>
+              <div style={{background:'var(--bg2)',border:'1px solid var(--border)',borderRadius:'16px',padding:'32px',position:'relative',overflow:'hidden',boxShadow:'0 0 60px rgba(255,45,120,0.08)'}}>
+                <div style={{position:'absolute',top:'-50%',right:'-50%',width:'100%',height:'100%',background:'radial-gradient(circle,rgba(255,45,120,0.10) 0%,transparent 70%)',pointerEvents:'none'}}></div>
+                <div style={{fontSize:'11px',fontWeight:700,letterSpacing:'0.12em',textTransform:'uppercase',color:'var(--pink)',marginBottom:'8px'}}>Free strategy audit</div>
+                <div style={{fontFamily:'var(--font-display)',fontSize:'20px',fontWeight:800,letterSpacing:'-0.03em',lineHeight:1.2,marginBottom:'8px'}}>See exactly what&apos;s holding your business back.</div>
+                <p style={{fontSize:'13px',color:'var(--muted)',fontWeight:300,lineHeight:1.65,marginBottom:'24px'}}>30 minutes. No pitch. We&apos;ll tell you precisely what we&apos;d do to grow your business.</p>
+                <form action="https://formspree.io/f/mgopyddw" method="POST" style={{display:'flex',flexDirection:'column',gap:'14px'}}>
+                  <input type="hidden" name="_next" value="/thank-you" />
+                  <input type="hidden" name="_source" value="hero" />
+                  <div className="form-group" style={{marginBottom:0}}>
+                    <label className="form-label">Your name</label>
+                    <input className="form-input" type="text" name="name" placeholder="Ryan Smith" />
+                  </div>
+                  <div className="form-group" style={{marginBottom:0}}>
+                    <label className="form-label">Email</label>
+                    <input className="form-input" type="email" name="email" placeholder="you@yourbusiness.com" required />
+                  </div>
+                  <div className="form-group" style={{marginBottom:0}}>
+                    <label className="form-label">Phone</label>
+                    <input className="form-input" type="tel" name="phone" placeholder="(954) 555-0100" />
+                  </div>
+                  <button type="submit" className="btn-primary" style={{width:'100%',border:'none',cursor:'pointer',fontFamily:'inherit',marginTop:'4px'}}>Get my free audit →</button>
+                </form>
+              </div>
+            </div>
           </div>
           <div className="hero-stats">
             <div><div className="stat-num">100%</div><div className="stat-label">Done for you</div></div>
