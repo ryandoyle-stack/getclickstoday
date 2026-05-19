@@ -32,9 +32,32 @@ export default function ServicesIndexClient() {
           Get<span>Clicks</span>Today
         </a>
         <ul className="nav-links">
-          <li><a href="/services">Services</a></li>
-          <li><a href="/industries">Industries</a></li>
-          <li><a href="/#pricing">Pricing</a></li>
+          <li className="nav-dropdown">
+            <a href="/services" className="nav-dropdown-toggle">Services</a>
+            <div className="nav-dropdown-menu">
+              <a href="/services/social-media-management"><strong>Social Media Management</strong><span>$500/mo</span></a>
+              <a href="/services/email-marketing"><strong>Email Marketing</strong><span>$500/mo</span></a>
+              <a href="/services/seo-local-search"><strong>SEO &amp; Local Search</strong><span>$500/mo</span></a>
+              <a href="/services/paid-ads"><strong>Paid Ads Management</strong><span>$500/mo + ad spend</span></a>
+              <div className="nav-dropdown-divider"></div>
+              <a href="/services" className="all-link">See all services →</a>
+              <a href="/#pricing">See pricing →</a>
+            </div>
+          </li>
+          <li className="nav-dropdown">
+            <a href="/industries" className="nav-dropdown-toggle">Industries</a>
+            <div className="nav-dropdown-menu">
+              <a href="/industries/med-spas"><strong>Med Spas &amp; Aesthetics</strong><span style={{color:'var(--pink)'}}>Hot</span></a>
+              <a href="/industries/dental"><strong>Dental &amp; Cosmetic Dentistry</strong><span style={{color:'var(--pink)'}}>Hot</span></a>
+              <a href="/industries/restaurants"><strong>Restaurants &amp; Hospitality</strong></a>
+              <a href="/industries/local-services"><strong>Local Services</strong></a>
+              <a href="/industries/ecommerce"><strong>Ecommerce</strong></a>
+              <a href="/industries/professional-services"><strong>Professional Services</strong></a>
+              <a href="/industries/real-estate"><strong>Real Estate</strong></a>
+              <div className="nav-dropdown-divider"></div>
+              <a href="/industries" className="all-link">See all industries →</a>
+            </div>
+          </li>
           <li><a href="/#contact" className="nav-cta">Get free audit</a></li>
         </ul>
       </nav>
