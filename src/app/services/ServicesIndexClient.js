@@ -33,7 +33,7 @@ export default function ServicesIndexClient() {
         </a>
         <ul className="nav-links">
           <li><a href="/services">Services</a></li>
-          <li><a href="/#industries">Industries</a></li>
+          <li><a href="/industries">Industries</a></li>
           <li><a href="/#pricing">Pricing</a></li>
           <li><a href="/#contact" className="nav-cta">Get free audit</a></li>
         </ul>
@@ -89,7 +89,7 @@ export default function ServicesIndexClient() {
         </a>
         <ul className="footer-nav">
           <li><a href="/services">Services</a></li>
-          <li><a href="/#industries">Industries</a></li>
+          <li><a href="/industries">Industries</a></li>
           <li><a href="/#pricing">Pricing</a></li>
           <li><a href="/#contact">Contact</a></li>
         </ul>
