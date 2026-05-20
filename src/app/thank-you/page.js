@@ -32,10 +32,10 @@ export default function ThankYou() {
         </div>
         <div style={{fontSize:'10px',fontWeight:700,letterSpacing:'0.2em',color:'var(--cyan)',textTransform:'uppercase',marginBottom:'16px'}}>Message received</div>
         <h1 style={{fontFamily:'var(--font-display)',fontSize:'clamp(36px, 5vw, 56px)',fontWeight:800,letterSpacing:'-0.04em',lineHeight:1.05,marginBottom:'20px',color:'var(--text)'}}>
-          You&apos;re one step away<br />from <em style={{fontStyle:'normal',color:'var(--pink)'}}>real growth.</em>
+          Thanks! While you wait,<br /><em style={{fontStyle:'normal',color:'var(--pink)'}}>lock in your audit call.</em>
         </h1>
         <p style={{fontSize:'16px',fontWeight:300,color:'var(--muted)',lineHeight:1.75,maxWidth:'520px',margin:'0 auto 12px'}}>
-          We&apos;ve received your message and will be in touch within 24 hours. Want to move faster? Book your free 30-minute strategy audit directly below.
+          We&apos;ll reply within 24 hours — but why wait? Book your free 30-min audit below and skip the queue. Pick whatever time works for you.
         </p>
       </section>
 

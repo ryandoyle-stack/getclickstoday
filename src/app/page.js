@@ -1,8 +1,10 @@
 'use client'
 import './globals.css'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 
 export default function Home() {
+  const [menuOpen, setMenuOpen] = useState(false)
+
   useEffect(() => {
     const obs = new IntersectionObserver(entries => {
       entries.forEach(e => {
@@ -69,7 +71,38 @@ export default function Home() {
           </li>
           <li><a href="#contact" className="nav-cta">Get free audit</a></li>
         </ul>
+        <button className={`nav-hamburger${menuOpen ? ' open' : ''}`} onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
       </nav>
+
+      {/* Mobile menu overlay */}
+      <div className={`mobile-menu${menuOpen ? ' open' : ''}`} onClick={e => { if (e.target === e.currentTarget) setMenuOpen(false) }}>
+        <div className="mobile-menu-inner">
+          <div className="mobile-menu-top">
+            <a href="#hero-wrap" className="nav-logo" onClick={() => setMenuOpen(false)}>Get<span>Clicks</span>Today</a>
+            <button className="mobile-menu-close" onClick={() => setMenuOpen(false)}>×</button>
+          </div>
+          <div className="mobile-menu-links">
+            <div className="mobile-menu-sub-group">
+              <div className="mobile-menu-sub-label">Services</div>
+              <a href="/services/social-media-management" className="mobile-menu-sub" onClick={() => setMenuOpen(false)}>Social Media Management</a>
+              <a href="/services/email-marketing" className="mobile-menu-sub" onClick={() => setMenuOpen(false)}>Email Marketing</a>
+              <a href="/services/seo-local-search" className="mobile-menu-sub" onClick={() => setMenuOpen(false)}>SEO &amp; Local Search</a>
+              <a href="/services/paid-ads" className="mobile-menu-sub" onClick={() => setMenuOpen(false)}>Paid Ads Management</a>
+              <a href="/services/gbp-management" className="mobile-menu-sub" onClick={() => setMenuOpen(false)}>GBP Management</a>
+              <a href="/services/reputation-management" className="mobile-menu-sub" onClick={() => setMenuOpen(false)}>Reputation Management</a>
+              <a href="/services/blog-content-marketing" className="mobile-menu-sub" onClick={() => setMenuOpen(false)}>Blog Content Marketing</a>
+            </div>
+            <a href="#bundle-highlight" className="mobile-menu-link" onClick={() => setMenuOpen(false)}>Bundles</a>
+            <a href="/industries" className="mobile-menu-link" onClick={() => setMenuOpen(false)}>Industries</a>
+            <a href="#pricing" className="mobile-menu-link" onClick={() => setMenuOpen(false)}>Pricing</a>
+            <a href="/blog" className="mobile-menu-link" onClick={() => setMenuOpen(false)}>Blog</a>
+          </div>
+          <a href="#contact" className="mobile-menu-cta" onClick={() => setMenuOpen(false)}>Get my free audit →</a>
+          <a href="/free-audit" className="mobile-menu-cta-ghost" onClick={() => setMenuOpen(false)}>Book your audit call instantly →</a>
+        </div>
+      </div>
 
       <div id="hero-wrap">
         <div className="hero-bg-image"></div>
@@ -109,6 +142,10 @@ export default function Home() {
                     <input className="form-input" type="tel" name="phone" placeholder="(954) 555-0100" />
                   </div>
                   <button type="submit" className="btn-primary" style={{width:'100%',border:'none',cursor:'pointer',fontFamily:'inherit',marginTop:'4px'}}>Get my free audit →</button>
+                  <div style={{textAlign:'center',marginTop:'14px'}}>
+                    <span style={{fontSize:'12px',color:'var(--muted)'}}>Prefer to skip the form?&nbsp;</span>
+                    <a href="/free-audit" style={{fontSize:'12px',color:'var(--cyan)',textDecoration:'underline',textUnderlineOffset:'2px',fontWeight:500}}>Book your audit call instantly →</a>
+                  </div>
                 </form>
               </div>
             </div>
@@ -639,7 +676,11 @@ export default function Home() {
                 </div>
                 <div className="form-group"><label className="form-label">What does success look like for you?</label><textarea className="form-textarea" name="message" placeholder="Where are you now, and what would growth look like in 90 days?" /></div>
                 <button type="submit" className="form-submit">Send message — it&apos;s free →</button>
-                <p className="form-note">No spam. No sales pressure. Just a real conversation about your business.</p>
+                <p className="form-note" style={{marginBottom:'12px'}}>No spam. No sales pressure. Just a real conversation about your business.</p>
+                <div style={{textAlign:'center',paddingTop:'4px',borderTop:'1px solid rgba(255,255,255,0.06)',paddingTop:'16px'}}>
+                  <p style={{fontSize:'12px',color:'var(--muted)',marginBottom:'10px'}}>Want to talk sooner?</p>
+                  <a href="/free-audit" className="btn-ghost" style={{fontSize:'12px',padding:'10px 24px'}}>Or book your audit call instantly →</a>
+                </div>
               </form>
             </div>
           </div>
